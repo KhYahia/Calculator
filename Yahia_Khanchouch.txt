@@ -1,0 +1,1058 @@
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$ git --version
+git version 2.42.0.windows.2
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$ git config --global user.name khanchouch
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$  git config --global user.email 220504543@st.atlas.edu.tr
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$ rthusconsulting.be
+bash: rthusconsulting.be: command not found
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=khanchouch
+user.email=220504543@st.atlas.edu.tr
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$  git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
+file:C:/Users/yahya/.gitconfig  user.name=khanchouch
+file:C:/Users/yahya/.gitconfig  user.email=220504543@st.atlas.edu.tr
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$ mkdir getting-started-with-git
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~
+$  cd getting-started-with-git
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git
+$  git init
+Initialized empty Git repository in C:/Users/yahya/getting-started-with-git/.git/
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git (master)
+$ cd .git
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/.git (GIT_DIR!)
+$ ls -la
+total 11
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 ./
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 ../
+-rw-r--r-- 1 yahya 197609  23 Nov 15 11:50 HEAD
+-rw-r--r-- 1 yahya 197609 130 Nov 15 11:50 config
+-rw-r--r-- 1 yahya 197609  73 Nov 15 11:50 description
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 hooks/
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 info/
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 objects/
+drwxr-xr-x 1 yahya 197609   0 Nov 15 11:50 refs/
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/.git (GIT_DIR!)
+$ echo "Hello, Git!" > hello.txt
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/.git (GIT_DIR!)
+$ git add hello.txt
+fatal: this operation must be run in a work tree
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/.git (GIT_DIR!)
+$ cd ..
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git (master)
+$ git commit -m "Initial commit: sayin' hello"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git (master)
+$ mkdir calculator
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git (master)
+$ cd calculator
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git init
+Initialized empty Git repository in C:/Users/yahya/getting-started-with-git/calculator/.git/
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:04 ./
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:03 ../
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:04 .git/
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ touch README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:08 ./
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:03 ../
+drwxr-xr-x 1 yahya 197609 0 Nov 15 12:04 .git/
+-rw-r--r-- 1 yahya 197609 0 Nov 15 12:08 README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git add README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git commit -m "Initial commit"
+[master (root-commit) 2a6e282] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git log
+commit 2a6e2828b8725d083b47a9199fa6e6b3c0dcdebd (HEAD -> master)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:10:15 2023 -0800
+
+    Initial commit
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  Git repository
+git: 'repository' is not a git command. See 'git --help'.
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "# Calculator Project" >> README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "public class Calculator {}" >> Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "This project will hold a simple implementation of a Calcualtor in Java" >> README.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git commit -m "Added project title to the README"
+[master 36c9d93] Added project title to the README
+ 1 file changed, 1 insertion(+)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "Rename Calculator.java to CalculatorNew.java"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ vim calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git mv Calculator.java CalculatorNew
+fatal: not under version control, source=Calculator.java, destination=CalculatorNew
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ touch CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git add CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add README.md CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add *.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add *.md *.java
+warning: in the working copy of 'Calculator.java', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   CHANGELOG.md
+        new file:   Calculator.java
+        modified:   README.md
+
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add .
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "Extra information about the projec
+>
+>
+> $ git commit -m "Extra information about the project, a changelog file and our future Calculator classfile"
+>
+> :q!
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+> :q!
+>
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+>
+>
+> "
+error: pathspec 'information' did not match any file(s) known to git
+error: pathspec 'about' did not match any file(s) known to git
+error: pathspec 'the' did not match any file(s) known to git
+error: pathspec 'project,' did not match any file(s) known to git
+error: pathspec 'a' did not match any file(s) known to git
+error: pathspec 'changelog' did not match any file(s) known to git
+error: pathspec 'file' did not match any file(s) known to git
+error: pathspec 'and' did not match any file(s) known to git
+error: pathspec 'our' did not match any file(s) known to git
+error: pathspec 'future' did not match any file(s) known to git
+error: pathspec 'Calculator' did not match any file(s) known to git
+error: pathspec 'classfile
+
+:q!
+:q!
+
+
+
+' did not match any file(s) known to git
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$
+Display all 4935 possibilities? (y or n)
+!                                                                        declare
+./                                                                       declaredconfiguration.dll
+0ae3b998-9a38-4b72-a4c4-06849441518d_Servicing-Stack.dll                 defragproxy.dll
+4545ffe2-0dc4-4df4-9d02-299ef204635e_hvsocket.dll                        defragres.dll
+69fe178f-26e7-43a9-aa7d-2b616b672dde_eventlogservice.dll                 defragsvc.dll
+6bea57fb-8dfb-4177-9ae8-42e8b3529933_RuntimeDeviceInstall.dll            delegatorprovider.dll
+:                                                                        deploymentcsphelper.exe
+ACPBackgroundManagerPolicy.dll                                           deploymentcsps.dll
+AJRouter.dll                                                             desk.cpl
+APHostClient.dll                                                         deskadp.dll
+APHostRes.dll                                                            deskmon.dll
+APHostService.dll                                                        desktopimgdownldr.exe
+APMon.dll                                                                devenum.dll
+APMonUI.dll                                                              deviceaccess.dll
+ARP.EXE                                                                  deviceassociation.dll
+AUDIOKSE.dll                                                             devicengccredprov.dll
+AarSvc.dll                                                               deviceregistration.dll
+AboutSettingsHandlers.dll                                                devinv.dll
+AboveLockAppHost.dll                                                     devmgr.dll
+AcGenral.dll                                                             devobj.dll
+AcLayers.dll                                                             devrtl.dll
+AcSpecfc.dll                                                             df.exe
+AcWinRT.dll                                                              dfdts.dll
+AcXtrnal.dll                                                             dfrgui.exe
+AccountsRt.dll                                                           dfscli.dll
+ActionCenter.dll                                                         dfshim.dll
+ActionCenterCPL.dll                                                      dhcpcmonitor.dll
+ActionQueue.dll                                                          dhcpcore.dll
+ActivationClient.dll                                                     dhcpcore6.dll
+ActivationManager.dll                                                    dhcpcsvc.dll
+ActiveSyncCsp.dll                                                        dhcpcsvc6.dll
+ActiveSyncProvider.dll                                                   dhcpsapi.dll
+AdaptiveCards.dll                                                        diagnosticdataquery.dll
+AddressParser.dll                                                        diagperf.dll
+AdvancedEmojiDS.dll                                                      diagtrack.dll
+AggregatorHost.exe                                                       dialclient.dll
+Analog.Shell.Broker.dll                                                  dialer.exe
+AnalogCommonProxyStub.dll                                                dialserver.dll
+ApiSetHost.AppExecutionAlias.dll                                         diff.exe
+AppContracts.dll                                                         diff3.exe
+AppExtension.dll                                                         difxapi.dll
+AppHostRegistrationVerifier.exe                                          dimsjob.dll
+AppInstallerBackgroundUpdate.exe                                         dimsroam.dll
+AppInstallerPrompt.Desktop.dll                                           dinput.dll
+AppListBackupLauncher.dll                                                dinput8.dll
+AppLockerCSP.dll                                                         dir.exe
+AppMon.dll                                                               dircolors.exe
+AppReadiness.dll                                                         directmanipulation.dll
+AppResolver.dll                                                          directml.dll
+AppXApplicabilityBlob.dll                                                directxdatabasehelper.dll
+AppXDeploymentClient.dll                                                 directxdatabaseupdater.exe
+AppXDeploymentExtensions.desktop.dll                                     dirmngr-client.exe
+AppXDeploymentExtensions.onecore.dll                                     dirmngr.exe
+AppXDeploymentServer.dll                                                 dirname.exe
+Apphlpdm.dll                                                             dirs
+ApplicationControlCSP.dll                                                discan.dll
+ApplicationFrame.dll                                                     diskpart.exe
+ApplicationFrameHost.exe                                                 diskperf.exe
+ApplicationTargetedFeatureDatabase.dll                                   diskraid.exe
+ApplyTrustOffline.exe                                                    diskusage.exe
+AppointmentActivation.dll                                                disown
+AppointmentApis.dll                                                      dispdiag.exe
+ApproveChildRequest.exe                                                  dispex.dll
+AppxAllUserStore.dll                                                     djctq.rs
+AppxApplicabilityEngine.dll                                              djoin.exe
+AppxPackaging.dll                                                        dllhost.exe
+AppxSip.dll                                                              dllhst3g.exe
+AppxStreamingDataSourcePS.dll                                            dlnashext.dll
+AppxSysprep.dll                                                          dmcertinst.exe
+Apx01000.dll                                                             dmcfghost.exe
+AssignedAccessRuntime.dll                                                dmcfgutils.dll
+AtBroker.exe                                                             dmclient.exe
+Atlassian.Bitbucket.UI.exe                                               dmcmnutils.dll
+Atlassian.Bitbucket.dll                                                  dmcommandlineutils.dll
+AudioEndpointBuilder.dll                                                 dmcsps.dll
+AudioEng.dll                                                             dmdlgs.dll
+AudioHandlers.dll                                                        dmdskmgr.dll
+AudioSes.dll                                                             dmdskres.dll
+AudioSrvPolicyManager.dll                                                dmdskres2.dll
+AuthBroker.dll                                                           dmenrollengine.dll
+AuthBrokerUI.dll                                                         dmenterprisediagnostics.dll
+AuthExt.dll                                                              dmintf.dll
+AuthFWGP.dll                                                             dmiso8601utils.dll
+AuthFWSnapin.dll                                                         dmloader.dll
+AuthFWWizFwk.dll                                                         dmocx.dll
+AuthHost.exe                                                             dmoleaututils.dll
+AuthHostProxy.dll                                                        dmprocessxmlfiltered.dll
+Avalonia.Base.dll                                                        dmpushproxy.dll
+Avalonia.Controls.dll                                                    dmsynth.dll
+Avalonia.DesignerSupport.dll                                             dmusic.dll
+Avalonia.Dialogs.dll                                                     dmutil.dll
+Avalonia.Markup.Xaml.dll                                                 dmvdsitf.dll
+Avalonia.Markup.dll                                                      dmview.ocx
+Avalonia.MicroCom.dll                                                    dmwappushsvc.dll
+Avalonia.OpenGL.dll                                                      dmwmicsp.dll
+Avalonia.Remote.Protocol.dll                                             dmxmlhelputils.dll
+Avalonia.Skia.dll                                                        dnsapi.dll
+Avalonia.Themes.Fluent.dll                                               dnscacheugc.exe
+Avalonia.Win32.dll                                                       dnsclientcim.dll
+Avalonia.dll                                                             dnsclientpsprovider.dll
+AxInstSv.dll                                                             dnscmmc.dll
+AxInstUI.exe                                                             dnsext.dll
+AzSqlExt.dll                                                             dnshc.dll
+BCP47Langs.dll                                                           dnsrslvr.dll
+BCP47mrm.dll                                                             do
+BFE.DLL                                                                  doclient.dll
+BOOTVID.DLL                                                              docprop.dll
+BTAGService.dll                                                          docx2txt
+BWContextHandler.dll                                                     docx2txt.pl
+BackgroundMediaPolicy.dll                                                domgmt.dll
+BackgroundTransferHost.exe                                               domiprov.dll
+BamSettingsClient.dll                                                    done
+BarcodeProvisioningPlugin.dll                                            dos2unix.exe
+BcastDVRBroker.dll                                                       dosettings.dll
+BcastDVRClient.dll                                                       doskey.exe
+BcastDVRCommon.dll                                                       dosvc.dll
+BdeHdCfgLib.dll                                                          dot3api.dll
+BdeUISrv.exe                                                             dot3cfg.dll
+BingASDS.dll                                                             dot3dlg.dll
+BingFilterDS.dll                                                         dot3gpclnt.dll
+BingMaps.dll                                                             dot3gpui.dll
+BingOnlineServices.dll                                                   dot3hc.dll
+BioCredProv.dll                                                          dot3mm.dll
+BioIso.exe                                                               dot3msm.dll
+BitLockerCsp.dll                                                         dot3svc.dll
+BitLockerDeviceEncryption.exe                                            dot3ui.dll
+BitLockerWizardElev.exe                                                  dpapi.dll
+BitsProxy.dll                                                            dpapimig.exe
+BlbEvents.dll                                                            dpapiprovider.dll
+BluetoothApis.dll                                                        dpapisrv.dll
+BluetoothDesktopHandlers.dll                                             dplcsp.dll
+BluetoothOppPushClient.dll                                               dpnaddr.dll
+BootMenuUX.dll                                                           dpnathlp.dll
+BrokerFileDialog.dll                                                     dpnet.dll
+BrokerLib.dll                                                            dpnhpast.dll
+BthAvctpSvc.dll                                                          dpnhupnp.dll
+BthAvrcp.dll                                                             dpnlobby.dll
+BthAvrcpAppSvc.dll                                                       dpnsvr.exe
+BthMtpContextHandler.dll                                                 dps.dll
+BthRadioMedia.dll                                                        dpx.dll
+BthTelemetry.dll                                                         driverquery.exe
+BthpanContextHandler.dll                                                 drprov.dll
+Bubbles.scr                                                              drt.dll
+ByteCodeGenerator.exe                                                    drtprov.dll
+CBDHSvc.dll                                                              drttransport.dll
+CHxReadingStringIME.dll                                                  drvinst.exe
+CIDiag.exe                                                               drvsetup.dll
+CIRCoInst.dll                                                            drvstore.dll
+COLORCNV.DLL                                                             dsauth.dll
+CPFilters.dll                                                            dsclient.dll
+CSystemEventsBrokerClient.dll                                            dscproxy.dll
+CXHProvisioningServer.dll                                                dsdmo.dll
+C_G18030.DLL                                                             dskquota.dll
+C_IS2022.DLL                                                             dskquoui.dll
+C_ISCII.DLL                                                              dsound.dll
+CallButtons.ProxyStub.dll                                                dsparse.dll
+CallButtons.dll                                                          dsprop.dll
+CallHistoryClient.dll                                                    dsprov.dll
+CameraCaptureUI.dll                                                      dsquery.dll
+CameraSettingsUIHost.exe                                                 dsreg.dll
+CapabilityAccessHandlers.dll                                             dsregcmd.exe
+CapabilityAccessManager.dll                                              dsregtask.dll
+CapabilityAccessManagerClient.dll                                        dsrole.dll
+CaptureService.dll                                                       dssec.dll
+CastLaunch.dll                                                           dssenh.dll
+CastSrv.exe                                                              dssvc.dll
+CastingShellExt.dll                                                      dstokenclean.exe
+CertEnroll.dll                                                           dsuiext.dll
+CertEnrollCtrl.exe                                                       dswave.dll
+CertEnrollUI.dll                                                         dtdump.exe
+CertPKICmdlet.dll                                                        dtsh.dll
+CertPolEng.dll                                                           du.exe
+CfgSPCellular.dll                                                        dui70.dll
+CfgSPPolicy.dll                                                          dumpsexp.exe
+Chakra.dll                                                               duser.dll
+Chakradiag.dll                                                           dusmapi.dll
+Chakrathunk.dll                                                          dusmsvc.dll
+ChatApis.dll                                                             dusmtask.exe
+CheckNetIsolation.exe                                                    dvdplay.exe
+ChsStrokeDS.dll                                                          dwm.exe
+ChtBopomofoDS.dll                                                        dwmapi.dll
+ChtCangjieDS.dll                                                         dwmcore.dll
+ChtHkStrokeDS.dll                                                        dwmghost.dll
+ChtQuickDS.dll                                                           dwminit.dll
+ChxAPDS.dll                                                              dwmredir.dll
+ChxDecoder.dll                                                           dwmscene.dll
+ChxHAPDS.dll                                                             dxdiag.exe
+CiTool.exe                                                               dxdiagn.dll
+CleanPCCSP.dll                                                           dxgi.dll
+ClipRenew.exe                                                            dxgiadaptercache.exe
+ClipSVC.dll                                                              dxgwdi.dll
+ClipUp.exe                                                               dxilconv.dll
+ClipboardServer.dll                                                      dxmasf.dll
+Clipc.dll                                                                dxpps.dll
+CloudDesktopCSP.dll                                                      dxtmsft.dll
+CloudDomainJoinAUG.dll                                                   dxtrans.dll
+CloudDomainJoinDataModelServer.dll                                       dxva2.dll
+CloudExperienceHost.dll                                                  dynamoapi.dll
+CloudExperienceHostBroker.dll                                            eShims.dll
+CloudExperienceHostBroker.exe                                            eUICCsCSP.dll
+CloudExperienceHostCommon.dll                                            eapp3hst.dll
+CloudExperienceHostRedirection.dll                                       eappcfg.dll
+CloudExperienceHostUser.dll                                              eappcfgui.dll
+CloudIdWxhExtension.dll                                                  eappgnui.dll
+CloudNotifications.exe                                                   eapphost.dll
+CloudRecoveryDownloadTool.dll                                            eappprxy.dll
+CloudRestoreLauncher.dll                                                 eapprovp.dll
+CodeIntegrityAggregator.dll                                              eapputil.dll
+CompMgmtLauncher.exe                                                     eapsimextdesktop.dll
+CompPkgSrv.exe                                                           eapsvc.dll
+CompPkgSup.dll                                                           easconsent.dll
+CompatAggregator.dll                                                     easinvoker.exe
+CompatTelRunner.exe                                                      easinvoker.proxystub.dll
+ComposableShellProxyStub.dll                                             easwrt.dll
+ComposerFramework.dll                                                    echo
+ComputerDefaults.exe                                                     echo.exe
+ConfigureExpandedStorage.dll                                             edgeIso.dll
+ConhostV1.dll                                                            edgeangle.dll
+ConnectedAccountState.dll                                                edgehtml.dll
+ConsentExperienceCommon.dll                                              edit.dll
+ConsentUX.dll                                                            edit_test.exe
+ConsentUxClient.dll                                                      edit_test_dll.exe
+ConsoleLogon.dll                                                         edpauditapi.dll
+ConstraintIndex.Search.dll                                               edpcsp.dll
+ContactActivation.dll                                                    edpnotify.exe
+ContactApis.dll                                                          edptask.dll
+ContactHarvesterDS.dll                                                   edputil.dll
+ContentDeliveryManager.Utilities.dll                                     eeprov.dll
+ControlLib.dll                                                           eeutil.dll
+ControlLib32.dll                                                         efsadu.dll
+CoreMas.dll                                                              efscore.dll
+CoreMessaging.dll                                                        efsext.dll
+CoreMmRes.dll                                                            efslsaext.dll
+CorePrivacySettingsStore.dll                                             efssvc.dll
+CoreShell.dll                                                            efsui.exe
+CoreShellAPI.dll                                                         efsutil.dll
+CoreShellExtFramework.dll                                                efswrt.dll
+CoreUIComponents.dll                                                     egrep
+CourtesyEngine.dll                                                       elif
+CredDialogBroker.dll                                                     els.dll
+CredProv2faHelper.dll                                                    elsTrans.dll
+CredProvCommonCore.dll                                                   else
+CredProvDataModel.dll                                                    elshyph.dll
+CredProvHelper.dll                                                       elslad.dll
+CredentialEnrollmentManager.exe                                          embeddedmodesvc.dll
+CredentialEnrollmentManagerForUser.dll                                   embeddedmodesvcapi.dll
+CredentialUIBroker.exe                                                   enable
+CryptoWinRT.dll                                                          enc2xs
+CspCellularSettings.dll                                                  encapi.dll
+CspProxy.dll                                                             encguess
+CustomInstallExec.exe                                                    energy.dll
+D3D12.dll                                                                energyprov.dll
+D3D12Core.dll                                                            energytask.dll
+D3DCompiler_43.dll                                                       enrollmentapi.dll
+D3DCompiler_47.dll                                                       enterprisecsps.dll
+D3DSCache.dll                                                            enterpriseetw.dll
+D3DX9_43.dll                                                             enterpriseresourcemanager.dll
+DAConn.dll                                                               env.exe
+DAFESCL.dll                                                              envsubst.exe
+DAFIPP.dll                                                               eqossnap.dll
+DAFIoT.dll                                                               es.dll
+DAFMCP.dll                                                               esac
+DAFWSD.dll                                                               esent.dll
+DAFWiProv.dll                                                            esentprf.dll
+DAMM.dll                                                                 esentutl.exe
+DAMediaManager.dll                                                       esevss.dll
+DDACLSys.dll                                                             esimtool.exe
+DDDS.dll                                                                 esrb.rs
+DDOIProxy.dll                                                            esscli.dll
+DDORes.dll                                                               eudcedit.exe
+DFDWiz.exe                                                               eval
+DHolographicDisplay.dll                                                  eventcls.dll
+DMAlertListener.ProxyStub.dll                                            eventcreate.exe
+DMAppsRes.dll                                                            eventvwr.exe
+DMPushRouterCore.dll                                                     evr.dll
+DMRCDecoder.dll                                                          ex.exe
+DMRServer.dll                                                            exec
+DMWmiBridgeProv.dll                                                      execmodelproxy.dll
+DMWmiBridgeProv1.dll                                                     exit
+DWWIN.EXE                                                                expand.exe
+DWrite.dll                                                               explorer.exe
+DXCore.dll                                                               export
+DXP.dll                                                                  expr.exe
+DaOtpCredentialProvider.dll                                              extrac32.exe
+DafDnsSd.dll                                                             f3ahvoas.dll
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ formation about the project, a changelog file and our future Calculator classfile"
+> ~$ git commit -m "Extra information about the project, a changelog file and our future Calculator classfile"
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+>
+.git/            CHANGELOG.md     Calculator.java  README.md
+> "
+bash: formation: command not found
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "Extra information about the project, a changelog file and our future Calculator class file"
+[master 072c632] Extra information about the project, a changelog file and our future Calculator class file
+ 3 files changed, 5 insertions(+)
+ create mode 100644 CHANGELOG.md
+ create mode 100644 Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "Initial version of the Calculator project"  >> CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CHANGELOG.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add .
+warning: in the working copy of 'CHANGELOG.md', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit
+[master 377bcb1] Please enter the commit message for your changes. Lines starting
+ 1 file changed, 1 insertion(+)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m ""
+On branch master
+nothing to commit, working tree clean
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -am "Beautiful commit with all tracked file modifications"
+On branch master
+nothing to commit, working tree clean
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add .
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "Beautiful commit with all file modifications"
+On branch master
+nothing to commit, working tree clean
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "* [ ] Finalize Git repository setup" >> TODO.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "* [ ] Provide an addition method in Calculator.java" >> TODO.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        TODO.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ echo "TODO.md" >> .gitignore
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add .gitignore
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "Add .gitignore file"
+[master b0ae34b] Add .gitignore file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git branch feature/addition
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git branch
+  feature/addition
+* master
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$  git checkout -b feature/soon-to-be-discarded
+Switched to a new branch 'feature/soon-to-be-discarded'
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git checkout
+
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git branch feature/addition
+fatal: a branch named 'feature/addition' already exists
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ vim Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git add .
+warning: in the working copy of 'Calculator.java', LF will be replaced by CRLF the next time Git touches it
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git commit -m "Adding a method to Calculator.java class"
+[feature/soon-to-be-discarded 84d83a5] Adding a method to Calculator.java class
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git log
+commit 84d83a5bc6caeafb35808d70218b13093acb76ba (HEAD -> feature/soon-to-be-discarded)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:20:48 2023 -0800
+
+    Adding a method to Calculator.java class
+
+commit b0ae34b34e187024e20a4e3bbf2dcb81fb2c4bb7 (master, feature/addition)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:10:41 2023 -0800
+
+    Add .gitignore file
+
+commit 377bcb1b557221b8311f60f57b687d0b3b664af6
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:03:17 2023 -0800
+
+    Please enter the commit message for your changes. Lines starting
+
+commit 072c632812dc713af5b0a22f592834faf84cbdbf
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:01:19 2023 -0800
+
+    Extra information about the project, a changelog file and our future Calculator class file
+
+commit 36c9d934d96a20e752c9e98035d7c50d0acc6b8a
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:20:55 2023 -0800
+
+    Added project title to the README
+
+commit 2a6e2828b8725d083b47a9199fa6e6b3c0dcdebd
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:10:15 2023 -0800
+
+    Initial commit
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/soon-to-be-discarded)
+$ git checkout master
+Switched to branch 'master'
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git log
+commit b0ae34b34e187024e20a4e3bbf2dcb81fb2c4bb7 (HEAD -> master, feature/addition)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:10:41 2023 -0800
+
+    Add .gitignore file
+
+commit 377bcb1b557221b8311f60f57b687d0b3b664af6
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:03:17 2023 -0800
+
+    Please enter the commit message for your changes. Lines starting
+
+commit 072c632812dc713af5b0a22f592834faf84cbdbf
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:01:19 2023 -0800
+
+    Extra information about the project, a changelog file and our future Calculator class file
+
+commit 36c9d934d96a20e752c9e98035d7c50d0acc6b8a
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:20:55 2023 -0800
+
+    Added project title to the README
+
+commit 2a6e2828b8725d083b47a9199fa6e6b3c0dcdebd
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:10:15 2023 -0800
+
+    Initial commit
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$  git merge feature/addition
+Already up to date.
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ vim Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+M       Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ echo "#2020-12-11" >> CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$  echo "* Added integer addition feature" >> CHANGE LOG.md"
+> "
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$  git checkout master
+Switched to branch 'master'
+M       CHANGELOG.md
+M       Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git merge feature/addition
+Already up to date.
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+M       CHANGELOG.md
+M       Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ vim Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ $ git checkout feature/addition
+bash: $: command not found
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$  git checkout feature/addition
+Already on 'feature/addition'
+M       CHANGELOG.md
+M       Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ vim Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git add Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git commit -m
+error: switch `m' requires a value
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git commit -m
+error: switch `m' requires a value
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git commit -m "added sub"
+[feature/addition 1b720b2] added sub
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git log
+commit 1b720b2873e8227082bb2a7885ed0830aad608de (HEAD -> feature/addition)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 14:24:41 2023 -0800
+
+    added sub
+
+commit b0ae34b34e187024e20a4e3bbf2dcb81fb2c4bb7 (master)
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:10:41 2023 -0800
+
+    Add .gitignore file
+
+commit 377bcb1b557221b8311f60f57b687d0b3b664af6
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:03:17 2023 -0800
+
+    Please enter the commit message for your changes. Lines starting
+
+commit 072c632812dc713af5b0a22f592834faf84cbdbf
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 13:01:19 2023 -0800
+
+    Extra information about the project, a changelog file and our future Calculator class file
+
+commit 36c9d934d96a20e752c9e98035d7c50d0acc6b8a
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:20:55 2023 -0800
+
+    Added project title to the README
+
+commit 2a6e2828b8725d083b47a9199fa6e6b3c0dcdebd
+Author: khanchouch <220504543@st.atlas.edu.tr>
+Date:   Wed Nov 15 12:10:15 2023 -0800
+
+    Initial commit
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (feature/addition)
+$ git checkout master
+Switched to branch 'master'
+M       CHANGELOG.md
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ touch Application.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ vim Calculator.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git add Application.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "added app"
+[master ab7581f] added app
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Application.java
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git checkout feature/substraction
+error: pathspec 'feature/substraction' did not match any file(s) known to git
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git commit -m "added app"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CHANGELOG.md
+        modified:   Calculator.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGE
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git rebase master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git branch -d feature/addition
+error: The branch 'feature/addition' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature/addition'.
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (master)
+$ git checkout -b newbranch
+Switched to a new branch 'newbranch'
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (newbranch)
+$ git branch
+  feature/addition
+  feature/soon-to-be-discarded
+  master
+* newbranch
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (newbranch)
+$ git branch anotherbranch
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (newbranch)
+$ git branch -m anotherbranch
+fatal: a branch named 'anotherbranch' already exists
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (newbranch)
+$ git branch -M anotherbranch
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (anotherbranch)
+$ git branch
+* anotherbranch
+  feature/addition
+  feature/soon-to-be-discarded
+  master
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (anotherbranch)
+$
+
+yahya@LAPTOP-II6CBK1I MINGW64 ~/getting-started-with-git/calculator (anotherbranch)
+$ git log -p --all > git_log.txt
+
